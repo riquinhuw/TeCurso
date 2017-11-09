@@ -31,10 +31,13 @@ namespace TeCurso
              *  Metodo Atualizar Disciplicas ( )
              *  
              *      CLASSE DISCIPLINA 4%
-             *  Metodo Cadastrar Alunos      ( ) COLOCAR MATRICULA NO MAIN, ACHAR MEIO DE MELHORAR ISSO DPS ( )
+             *  Metodo Cadastrar Alunos      ( ) 
              *  Metodo Consultar Alunos      ( )
              *  Metodo Remover Alunos        ( )
              *  Metodo Atualizar Alunos      ( )
+             *  
+             *      CLASSE MAIN 1%
+             *  Metodo para criar dados pre feitos ( )
              *  
              *  
              *  METODO LOGICO:
@@ -48,7 +51,7 @@ namespace TeCurso
             #region objetos Matrizes
             Aluno alunoMatriz = new Aluno();
             #endregion
-
+            
             alunoMatriz.CriarAluno();
             alunoMatriz.CriarAluno();
             alunoMatriz.CriarAluno();

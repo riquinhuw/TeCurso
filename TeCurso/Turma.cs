@@ -20,6 +20,13 @@ namespace TeCurso
         public ArrayList Diciplinas { get => diciplinas; set => diciplinas = value; }
         public ArrayList Alunos { get => alunos; set => alunos = value; }
 
-        Turma() { }
+        public Turma() { }
+
+        public void CriarTurma()
+        {
+            Console.Clear();
+
+
+        }
     }
 }
