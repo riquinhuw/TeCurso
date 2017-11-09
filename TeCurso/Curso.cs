@@ -37,7 +37,7 @@ namespace TeCurso
         public void CriarCurso()
         {
             Curso curso = new Curso();
-            Console.WriteLine("!!! CRIANDO CURSO !!!\n\n");
+            Console.WriteLine("!!! CRIANDO CURSO NA INSTITUICAO !!!\n\n");
 
             Console.WriteLine("Digite o nome do curso");
             curso.Nome = Console.ReadLine();

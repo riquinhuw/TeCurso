@@ -12,30 +12,42 @@ namespace TeCurso
 
         private string nome;
         private int id;
-        private ArrayList diciplinas = new ArrayList();
+        private ArrayList disciplinas = new ArrayList();
         private Professor professor = new Professor();
         private Aluno alunoMatiz = new Aluno();
-        //private Aluno aluno;
-
+        private ArrayList alunos = new ArrayList();
+        private int geradorDeId = 0;
 
         public string Nome { get => nome; set => nome = value; }
         public int Id { get => id; set => id = value; }
-        public ArrayList Diciplinas { get => diciplinas; set => diciplinas = value; }
+        public ArrayList Disciplinas { get => disciplinas; set => disciplinas = value; }
+        public Professor Professor { get => professor; set => professor = value; }
         public Aluno AlunoMatiz { get => alunoMatiz; set => alunoMatiz = value; }
+        public int GeradorDeId { get => geradorDeId; set => geradorDeId = value; }
 
-        //CRIAR MEIO DE COLOCAR MATRICULA NO MAIN PARA O ALUNO - APAGAR AVISO AO FAZER
-        public Aluno CadastrarAluno()
-        {   //colocar color aqui \/ EXTRA
+        public Disciplina() { }
+
+        public int GerarId()
+        {
+            int valor = this.GeradorDeId;
+            this.GeradorDeId++;
+            return valor;
+        }
+
+        public void CriarDiciplina() 
+        {
+            Disciplina disciplina = new Disciplina();
             Console.Clear();
-            Console.WriteLine("CADASTRAMENTO DE NOVO ALUNO NA DISCIPLINA\n\n");
-            Console.WriteLine("Digite o nome do aluno");
-            Aluno aluno = new Aluno();
-            aluno.Nome = Console.ReadLine();
-            Console.WriteLine("");
+            Console.WriteLine("CRIANDO UMA NOVA DISCIPLINA NA INSTITUICAO\n\n");
 
-            //TALVEZ APAGUE TUDO
+            Console.WriteLine("Digite o nome da disciplina");
+            disciplina.Nome = Console.ReadLine();
 
-            return aluno;
+            disciplina.Id = GerarId();
+
+            this.Disciplinas.Add(disciplina);
+
+
         }
 
 

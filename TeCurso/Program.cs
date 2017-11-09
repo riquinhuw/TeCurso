@@ -25,19 +25,26 @@ namespace TeCurso
              *  Metodo Atualizar Turmas      ( )
              *  
              *      CLASSE TURMA 0% 
+             *  Metodo Criar Turma           (X)
              *  Metodo Cadrastar Disciplicas ( )
              *  Metodo Consultar Disciplicas ( )
              *  Metodo Remover Disciplicas   ( )
              *  Metodo Atualizar Disciplicas ( )
              *  
              *      CLASSE DISCIPLINA 4%
+             *  Metodo Criar Disciplina      (X)
              *  Metodo Cadastrar Alunos      ( ) 
              *  Metodo Consultar Alunos      ( )
              *  Metodo Remover Alunos        ( )
              *  Metodo Atualizar Alunos      ( )
              *  
              *      CLASSE MAIN 1%
-             *  Metodo para criar dados pre feitos ( )
+             *  Metodo criador ddados feitos ( )
+             *  
+             *      PESSOAS E SEUS FILHOS 50%
+             *  Metodo Criador de Professor   (X)
+             *  Metodo Criador de Coordenador (X)
+             *  Metodo Criador de Aluno       (X)
              *  
              *  
              *  METODO LOGICO:
@@ -45,21 +52,39 @@ namespace TeCurso
              *  Onde irei fazer um Foreach para localizar dentro desse array o indice do objeto dejesado
              *  Sem se importar com o index dele, pois sempre irei fazer que o programa faça uma busca ruim no array
              *  Já que não sei como posso organizar de uma forma mais "limpa"
+             *  
+             *  Sei que poderia usar os Id's como "chave primaria" para evitar de criar mais arrays por ai, mas irei fazer dessa forma mesmo
             */
             #endregion
 
             #region objetos Matrizes
             Aluno alunoMatriz = new Aluno();
+            Turma turmaMatriz = new Turma();
+            Disciplina disciplinaMatriz = new Disciplina();
             #endregion
-            
-            alunoMatriz.CriarAluno();
-            alunoMatriz.CriarAluno();
-            alunoMatriz.CriarAluno();
-            foreach (Aluno alunosProcurados in alunoMatriz.Alunos)
-            {
-                Console.WriteLine("Nome:{0} Matricula:{1}",alunosProcurados.Nome,alunosProcurados.Matricula);
 
+            disciplinaMatriz.CriarDiciplina();
+            disciplinaMatriz.CriarDiciplina();
+            foreach (Disciplina alunosProcurados in disciplinaMatriz.Disciplinas)
+            {
+                Console.WriteLine("Nome:{0} Matricula:{1}", alunosProcurados.Nome, alunosProcurados.Id);
             }
+
+            //turmaMatriz.CriarTurma();
+            //turmaMatriz.CriarTurma();
+
+            //foreach (Turma alunosProcurados in turmaMatriz.Turmas)
+            //{
+            //    Console.WriteLine("Nome:{0} Matricula:{1}", alunosProcurados.Nome, alunosProcurados.Id);
+            //}
+
+            //alunoMatriz.CriarAluno();
+            //alunoMatriz.CriarAluno();
+            //alunoMatriz.CriarAluno();
+            //foreach (Aluno alunosProcurados in alunoMatriz.Alunos)
+            //{
+            //    Console.WriteLine("Nome:{0} Matricula:{1}", alunosProcurados.Nome, alunosProcurados.Matricula);
+            //}
 
 
 

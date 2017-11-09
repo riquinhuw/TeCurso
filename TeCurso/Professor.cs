@@ -12,7 +12,8 @@ namespace TeCurso
         private int matricula;
         private float salario;
         private string turma;
-        protected ArrayList professores = new ArrayList();
+        private ArrayList professores = new ArrayList();
+        private int geradorDeMatricula = 0;
 
         public int Matricula { get => matricula; set => matricula = value; }
         public float Salario { get => salario; set => salario = value; }
@@ -20,12 +21,26 @@ namespace TeCurso
 
         public Professor() { }
 
-        public Professor(string nome, int idade, int matricula, string curso)
+        public int GerarMatricula()
         {
-            this.nome = nome;
-            this.idade = idade;
-            this.Matricula = matricula;
-            this.Turma = curso;
+            int valor = this.geradorDeMatricula;
+            this.geradorDeMatricula++;
+            return valor;
+
+        }
+
+        public void AdicionarProfessor(Professor professor) { this.professores.Add(professor); }
+
+        public void CriarProfessor()
+        {
+            Console.Clear();
+            Console.WriteLine("CADASTRAMENTO DE NOVO PROFESSOR NA INSTITUICAO\n\n");
+            Console.WriteLine("Digite o nome do Professor");
+            Professor professor = new Professor();
+            professor.Nome = Console.ReadLine();
+            professor.matricula = GerarMatricula();
+            AdicionarProfessor(professor);
+
         }
 
 

@@ -8,6 +8,10 @@ namespace TeCurso
 {
     public class Pessoa
     {
+
+        //Poderia usar polimorfismo, todos herdariam matricula, e eu iria fazer os metodos:
+        //Criar,AdiconarAoArray,GerarMatricula, mas... estou sem tempo e não domino ainda, dps vejo( ou não)
+
         protected string nome;
         protected int idade;
         protected string endereco;
