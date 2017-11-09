@@ -31,11 +31,11 @@ namespace TeCurso
              *  Metodo Remover Disciplicas   ( )
              *  Metodo Atualizar Disciplicas ( )
              *  
-             *      CLASSE DISCIPLINA 4%
+             *      CLASSE DISCIPLINA 40%
              *  Metodo Criar Disciplina      (X)
-             *  Metodo Cadastrar Alunos      ( ) 
-             *  Metodo Consultar Alunos      ( )
-             *  Metodo Remover Alunos        ( )
+             *  Metodo Cadastrar Alunos      (X) 
+             *  Metodo Consultar Alunos      (X)
+             *  Metodo Remover Alunos        (X)
              *  Metodo Atualizar Alunos      ( )
              *  
              *      CLASSE MAIN 1%
@@ -54,21 +54,31 @@ namespace TeCurso
              *  Já que não sei como posso organizar de uma forma mais "limpa"
              *  
              *  Sei que poderia usar os Id's como "chave primaria" para evitar de criar mais arrays por ai, mas irei fazer dessa forma mesmo
+             *  
+             *  Converti TUDO PARA LIST!
             */
             #endregion
 
             #region objetos Matrizes
             Aluno alunoMatriz = new Aluno();
+            Aluno a1 = new Aluno();
             Turma turmaMatriz = new Turma();
             Disciplina disciplinaMatriz = new Disciplina();
             #endregion
+            alunoMatriz.CriarAluno();
+            alunoMatriz.CriarAluno();
+            disciplinaMatriz.CriarDiciplina();
+            disciplinaMatriz.CriarDiciplina();
+            disciplinaMatriz.AdicionarAluno(alunoMatriz.Alunos);
+            
 
-            disciplinaMatriz.CriarDiciplina();
-            disciplinaMatriz.CriarDiciplina();
-            foreach (Disciplina alunosProcurados in disciplinaMatriz.Disciplinas)
-            {
-                Console.WriteLine("Nome:{0} Matricula:{1}", alunosProcurados.Nome, alunosProcurados.Id);
-            }
+
+            //disciplinaMatriz.CriarDiciplina();
+            //disciplinaMatriz.CriarDiciplina();
+            //foreach (Disciplina alunosProcurados in disciplinaMatriz.Disciplinas)
+            //{
+            //    Console.WriteLine("Nome:{0} Matricula:{1}", alunosProcurados.Nome, alunosProcurados.Id);
+            //}
 
             //turmaMatriz.CriarTurma();
             //turmaMatriz.CriarTurma();

@@ -17,7 +17,8 @@ namespace TeCurso
         private double nota2;
         private double nota3;
         private string diciplina;
-        private ArrayList alunos = new ArrayList();
+        //private ArrayList alunos = new ArrayList();
+        private List<Aluno> alunos = new List<Aluno>();
         protected int geradorDeMatricula = 0;
 
 
@@ -27,8 +28,9 @@ namespace TeCurso
         public double Nota2 { get => nota2; set => nota2 = value; }
         public double Nota3 { get => nota3; set => nota3 = value; }
         public string Diciplina { get => diciplina; set => diciplina = value; }
-        public ArrayList Alunos { get => alunos; set => alunos = value; }
+        //public ArrayList Alunos { get => alunos; set => alunos = value; 
         public Curso Curso { get => curso; set => curso = value; }
+        public List<Aluno> Alunos { get => alunos; set => alunos = value; }
 
         public Aluno() //Construtor Vazio
         { }
