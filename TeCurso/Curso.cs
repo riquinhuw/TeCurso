@@ -42,8 +42,9 @@ namespace TeCurso
             Console.WriteLine("Digite o nome do curso");
             curso.Nome = Console.ReadLine();
 
+            curso.id = GerarId();
 
-
+            this.Cursos.Add(curso);
 
         }
 

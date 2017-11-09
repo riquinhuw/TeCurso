@@ -57,6 +57,18 @@ namespace TeCurso
 
         }
 
+        public void CriarAluno()
+        {
+            Console.Clear();
+            Console.WriteLine("CADASTRAMENTO DE NOVO ALUNO NA INSTITUICAO\n\n");
+            Console.WriteLine("Digite o nome do aluno");
+            Aluno aluno = new Aluno();
+            aluno.Nome = Console.ReadLine();
+            aluno.matricula = GerarMatricula();
+            AdicionarAluno(aluno);
+
+        }
+
 
     }
 }
