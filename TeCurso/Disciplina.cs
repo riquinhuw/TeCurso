@@ -180,7 +180,7 @@ namespace TeCurso
 
         }
 
-        public int RemoverAluno(List<Aluno> listaDeAlunos) //falta por para ver as disciplinas que ele tem
+        public int RemoverAluno(List<Aluno> listaDeAlunos)
         {
 
             Console.Clear();
@@ -234,6 +234,82 @@ namespace TeCurso
                         Console.WriteLine("Localizamos o aluno:{0}", alunoProcurado.Nome);
                         Console.WriteLine("Sua matricula é:{0}", alunoProcurado.Matricula);
                         Console.WriteLine("Este e' o aluno que deseja excluir?(s/n)");
+                        if (Console.ReadLine().ToLower() == "s")
+
+                        {
+                            return i;
+                        }
+                        else { return 007; }
+
+                    }
+
+                    i++;
+                }
+                if (!achado) { Console.WriteLine("Aluno não encotrado"); return 007; }
+
+
+                return 007;
+            }
+
+
+
+        }
+
+        public int AlterarAluno(List<Aluno> listaDeAlunos)
+        {
+
+            Console.Clear();
+            int i = 0; //contador para a busca
+            string nomeDoAluno;
+            int matriculaDoAluno = 0;
+            bool achado = false;
+            Console.WriteLine("INDO APAGAR UM ALUNO, UI UI UI, DAN DAN DAN\n\n");
+            Console.WriteLine("Deseja procurar o aluno por matricula ou pelo nome exato?\nM para matricula, N para nome");
+            if (Console.ReadLine().ToUpper() == "N")
+            {
+                i = 0;
+                Console.WriteLine("Digite o nome do aluno exatamente igual");
+                nomeDoAluno = Console.ReadLine();
+                foreach (Aluno alunoProcurado in listaDeAlunos)
+                {
+                    if (alunoProcurado.Nome.ToUpper() == nomeDoAluno.ToUpper())
+                    {
+                        Console.WriteLine("Localizamos o aluno:{0}", alunoProcurado.Nome);
+                        Console.WriteLine("Sua matricula é:{0}", alunoProcurado.Matricula);
+                        Console.WriteLine("Este e' o aluno que deseja Alterar?(s/n)");
+                        if (Console.ReadLine().ToLower() == "s")
+
+                        {
+                            return i;
+                        }
+                        else { return 007; }
+
+
+
+
+                        achado = true;
+                        Console.ReadKey();
+
+                    }
+
+                    i++;
+                }
+                if (!achado) { Console.WriteLine("Aluno não encotrado"); return 007; }
+                return 007;
+
+            }
+            else
+            {
+                i = 0;
+                Console.WriteLine("Digite a matricula do aluno");
+                matriculaDoAluno = int.Parse(Console.ReadLine());
+                foreach (Aluno alunoProcurado in listaDeAlunos)
+                {
+                    if (alunoProcurado.Matricula == matriculaDoAluno)
+                    {
+                        Console.WriteLine("Localizamos o aluno:{0}", alunoProcurado.Nome);
+                        Console.WriteLine("Sua matricula é:{0}", alunoProcurado.Matricula);
+                        Console.WriteLine("Este e' o aluno que deseja Alterar?(s/n)");
                         if (Console.ReadLine().ToLower() == "s")
 
                         {

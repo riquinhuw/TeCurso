@@ -34,7 +34,7 @@ namespace TeCurso
 
         public void AdicionarCoordenador(Coordenador coordenador) { this.coordenadores.Add(coordenador); }
 
-        public void CriarProfessor()
+        public void CriarCoordenador()
         {
             Console.Clear();
             Console.WriteLine("CADASTRAMENTO DE NOVO COORDENADOR NA INSTITUICAO\n\n");
